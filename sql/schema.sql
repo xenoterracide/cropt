@@ -12,3 +12,5 @@
 -- employee data (management only)
    DROP SCHEMA IF EXISTS employees;
  CREATE SCHEMA employees;
+
+-- something in there
