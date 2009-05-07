@@ -2,15 +2,10 @@
 -- I may not like the design later either..
 --
 -- customer related data (some employees)
-   DROP SCHEMA IF EXISTS customer_data CASCADE;
- CREATE SCHEMA customer_data;
+   DROP SCHEMA IF EXISTS oc CASCADE;
+ CREATE SCHEMA oc;
 
--- inventory / services (all employees / some public)
-   DROP SCHEMA IF EXISTS inv_svc CASCADE;
- CREATE SCHEMA inv_svc;
-
--- employee data (management only)
-   DROP SCHEMA IF EXISTS employees;
- CREATE SCHEMA employees;
-
--- something in there
+ CREATE TABLE oc.customer (
+	id	BIGINT NOT NULL PRIMARY KEY,
+	lname	VARCHAR(255) NOT NULL,
+	fname	VARCHAR(255) NOT NULL, 
