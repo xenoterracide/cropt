@@ -5,6 +5,7 @@
  CREATE SCHEMA oc;
 
  
+/* CUSTOMER *************************************************************/
  CREATE TABLE oc.customer (
 	id	BIGINT		NOT NULL PRIMARY KEY,
 	lname	VARCHAR(255)	NOT NULL,
@@ -21,3 +22,4 @@
   ALTER	TABLE oc.customer
   ALTER COLUMN id
     SET DEFAULT nextval('oc.customer_id');
+/************************************************************** CUSTOMER */
