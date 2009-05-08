@@ -36,23 +36,23 @@
 		REFERENCES consumer.consumers (id)
 		ON UPDATE CASCADE
 		ON DELETE CASCADE,
-	phone	phone_t
+	phone	phone_t		NOT NULL	PRIMARY KEY
 );
  CREATE TABLE consumer.addresses (
 	id	BIGINT		NOT NULL
 		REFERENCES consumer.consumers (id)
 		ON UPDATE CASCADE
 		ON DELETE CASCADE,
-	addr1	VARCHAR(255),
+	addr1	VARCHAR(255)	NOT NULL,
 	addr2	VARCHAR(255),
-	city	VARCHAR(255),
-	state	state_t,
-	zip	zip_t
+	city	VARCHAR(255)	NOT NULL,
+	state	state_t		NOT NULL,
+	zip	zip_t		NOT NULL
 );
  CREATE TABLE consumer.email (
 	id	BIGINT		NOT NULL
 		REFERENCES consumer.consumers (id)
 		ON UPDATE CASCADE
 		ON DELETE CASCADE,
-	email	email_t
+	email	email_t		NOT NULL	PRIMARY KEY
 );
