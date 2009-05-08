@@ -11,6 +11,7 @@
  CREATE DOMAIN phone_ext_t AS CHAR(4);
  CREATE DOMAIN state_t AS CHAR(2);
  CREATE DOMAIN vin_t AS CHAR(17); --vehicle identification number
+ CREATE	DOMAIN email_t AS VARCHAR(255);
 
 /* CUSTOMERS ************************************************************/
  CREATE TABLE oc.customers (
@@ -21,7 +22,8 @@
 	addr2	VARCHAR(255),
 	zip	zip_t,
 	city	VARCHAR(255),
-	state	state_t
+	state	state_t,
+	email	email_t
 );
  CREATE SEQUENCE oc.customer_id OWNED BY oc.customers.id;
 
