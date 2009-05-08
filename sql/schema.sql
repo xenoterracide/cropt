@@ -1,6 +1,11 @@
 -- vim: ts=8
 -- after creating the database and correspoding user/pass create tables with
 -- psql -1f schema.sql
+
+/*************************************************************************/
+/* Consumer schema consist of name/contact info for all potential consumers
+ * this includes customers, employees, investors, and any one else
+ * **********************************************************************/
    DROP SCHEMA IF EXISTS consumer CASCADE;
  CREATE SCHEMA consumer;
 
