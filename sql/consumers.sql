@@ -15,7 +15,7 @@
  CREATE DOMAIN phone_t AS CHAR(14);
  CREATE DOMAIN phone_ext_t AS CHAR(4);
  CREATE DOMAIN state_t AS CHAR(2);
- CREATE	DOMAIN email_t AS VARCHAR(255);
+ CREATE DOMAIN email_t AS VARCHAR(255);
 
 /* CONSUMERS ************************************************************/
  CREATE TABLE consumer.consumers (
