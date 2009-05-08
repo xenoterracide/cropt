@@ -1,9 +1,3 @@
--- I really hate these schema names.
--- I may not like the design later either..
-
--- test
---
--- customer related data (some employees)
    DROP SCHEMA IF EXISTS oc CASCADE;
  CREATE SCHEMA oc;
 
