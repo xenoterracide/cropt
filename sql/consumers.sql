@@ -11,11 +11,11 @@
 
 -- the following are skeletal domains
 -- they should be expanded in the future to carry stricter validation
- CREATE DOMAIN zip_t AS CHAR(9);
- CREATE DOMAIN phone_t AS CHAR(14);
- CREATE DOMAIN phone_ext_t AS CHAR(4);
- CREATE DOMAIN state_t AS CHAR(2);
- CREATE DOMAIN email_t AS VARCHAR(255);
+ CREATE DOMAIN consumer.zip_t AS CHAR(9);
+ CREATE DOMAIN consumer.phone_t AS CHAR(14);
+ CREATE DOMAIN consumer.phone_ext_t AS CHAR(4);
+ CREATE DOMAIN consumer.state_t AS CHAR(2);
+ CREATE DOMAIN consumer.email_t AS VARCHAR(255);
 
 /* CONSUMERS ************************************************************/
  CREATE TABLE consumer.consumers (
@@ -40,21 +40,21 @@
 	PRIMARY KEY (id, phone)
 );
  CREATE TABLE consumer.addresses (
-	id	BIGINT		NOT NULL
+	id	BIGINT			NOT NULL
 		REFERENCES consumer.consumers (id)
 			ON UPDATE CASCADE
 			ON DELETE CASCADE,
-	addr1	VARCHAR(255)	NOT NULL,
+	addr1	VARCHAR(255)		NOT NULL,
 	addr2	VARCHAR(255),
-	city	VARCHAR(255)	NOT NULL,
-	state	state_t		NOT NULL,
-	zip	zip_t		NOT NULL
+	city	VARCHAR(255)		NOT NULL,
+	state	consumer.state_t	NOT NULL,
+	zip	consumer.zip_t		NOT NULL
 );
  CREATE TABLE consumer.email (
-	id	BIGINT		NOT NULL
+	id	BIGINT			NOT NULL
 		REFERENCES consumer.consumers (id)
 			ON UPDATE CASCADE
 			ON DELETE CASCADE,
-	email	email_t		NOT NULL,
+	email	consumer.email_t	NOT NULL,
 	PRIMARY KEY (id, email)
 );
