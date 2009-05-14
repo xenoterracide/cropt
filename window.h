@@ -23,23 +23,6 @@ public:
 
 private slots:
 	void updateButtons(int row);
-
-private:
-	void setupModel();
-
-	QLabel *nameLabel;
-	QLabel *addressLabel;
-	QLabel *typeLabel;
-	QLineEdit *nameEdit;
-	QTextEdit *addressEdit;
-	QComboBox *typeComboBox;
-	QPushButton *nextButton;
-	QPushButton *previousButton;
-
-	QSqlRelationalTableModel *model;
-	QItemSelectionModel *selectionModel;
-	QDataWidgetMapper *mapper;
-	int typeIndex;
 };
 
 #endif
